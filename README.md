@@ -9,3 +9,5 @@ starting with a .bashrc
 ### 2013-05-25 ###
 * adding .bashrc
 * writing README.md
+* added damnit's .vimrc
+    https://github.com/damnit
