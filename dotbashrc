@@ -78,11 +78,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 alias kk='ls -alF'
 # alias 'öö'='ls -alF'
+alias lt='ls -lrth'
+alias list_programms='ls /bin /sbin /usr/bin /usr/sbin /usr/bin/X11 | xargs whatis | less '
 
 # some other useful aliases
 alias cd..='cd ..'
@@ -91,16 +93,26 @@ alias ..='cd ..'
 alias ...='cd ...'
 alias df='df -h'
 alias sudo='sudo '
+alias root='sudo su'
 alias frupic='~/scripts/frupic.sh'
 alias inst='sudo apt-get install'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias search='apt-cache search'
 alias dist-upgrade='sudo apt-get dist-upgrade'
-alias clean='sudo apt-get autoclean && sudo apt-get autoremove && sudo apt-get clean'
 alias aus='sudo shutdown -h now'
+alias aplog='tail -f /var/log/apache2/*.log'
+alias root='sudo su'
+alias ping='ping -c 4'
 alias doch='sudo $(history -p !-1)'
-alias akku='acpi -V'
+alias mediathek='sudo /media/usb01/mediathekview/MediathekView__Linux.sh'
+alias mount='mount | column -t'
+alias free='free -mlt'
+alias cpuinfo='lscpu'
+alias wget='wget -c'
+alias df='df -h'
+alias du='du -ch'
+alias downforme='~/scripts/downforme.sh'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -123,3 +135,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+LANG=en_US
+export LANG
+LC_CTYPE=en_US.utf8
+export LC_TYPE
+LANGUAGE=en_US.utf8
+export LANGUAGE
+LC_ALL=en_US.utf8
+export LC_ALL
